@@ -154,9 +154,8 @@
                     <option value="1">RM.02.01-RJ / Pasien Baru ( dewasa )</option>
                     <option value="2">RM.02.01-RJ / Pasien Lama ( dewasa )</option>
                     <option value="3">RM.02.01-RJ / Pasien Anak ( Pasien Baru )</option>
-                    <option value="radiologi">Form Order Radiologi</option>
-                    <option value="laboratorium">Form Order Laboratorium</option>
-
+                    {{-- <option value="radiologi">Form Order Radiologi</option>
+                    <option value="laboratorium">Form Order Laboratorium</option> --}}
                 </select>
             </div>
             <div class="viewform">
