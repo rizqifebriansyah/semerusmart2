@@ -8,11 +8,11 @@
         </div>
         <div class="col-md-3">
             <div class="alert alert-info" role="">
-                @if ($counter == 1)
+                <?php if($counter == 1): ?>
                 <p class="text-bold text-sm"> Pasien baru , kunjungan pertama ! </p>
-                @else
-                <p class="text-bold text-sm"> Pasien lama, Kunjungan ke-{{ $counter }} </p>
-                @endif
+                <?php else: ?>
+                <p class="text-bold text-sm"> Pasien lama, Kunjungan ke-<?php echo e($counter); ?> </p>
+                <?php endif; ?>
             </div>
         </div>
         <div class="col-md-8">
@@ -25,18 +25,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $rm }}</td>
-                        <td>{{ $nama }}</td>
-                        <td>{{ $umur }} Tahun</td>
-                        <td>{{ $alamat }}</td>
-                        <input hidden type="text" id="nama" value="{{ $nama }}">
-                        <input hidden type="text" id="unit" value="{{ $unit }}">
-                        <input hidden type="text" id="umur" value="{{ $umur }}">
-                        <input hidden type="text" id="alamat" value="{{ $alamat }}">
-                        <input hidden type="text" id="tglmasuk" value="{{ $tglmasuk }}">
-                        <input hidden type="text" id="kodekunjungan" value="{{ $kodekunjungan }}">
-                        <input hidden type="text" id="nomorrm" value="{{ $rm }}">
-                        <input hidden type="text" id="kelas" value="{{ $kelas }}">
+                        <td><?php echo e($rm); ?></td>
+                        <td><?php echo e($nama); ?></td>
+                        <td><?php echo e($umur); ?> Tahun</td>
+                        <td><?php echo e($alamat); ?></td>
+                        <input hidden type="text" id="nama" value="<?php echo e($nama); ?>">
+                        <input hidden type="text" id="unit" value="<?php echo e($unit); ?>">
+                        <input hidden type="text" id="umur" value="<?php echo e($umur); ?>">
+                        <input hidden type="text" id="alamat" value="<?php echo e($alamat); ?>">
+                        <input hidden type="text" id="tglmasuk" value="<?php echo e($tglmasuk); ?>">
+                        <input hidden type="text" id="kodekunjungan" value="<?php echo e($kodekunjungan); ?>">
+                        <input hidden type="text" id="nomorrm" value="<?php echo e($rm); ?>">
+                        <input hidden type="text" id="kelas" value="<?php echo e($kelas); ?>">
                     </tr>
                 </tbody>
             </table>
@@ -49,21 +49,19 @@
                 Medis</a>
         </li>
         <li class="nav-item"><a class="nav-link tampilcppt" href="#cppt" data-toggle="tab"
-                nomorrm="{{ $rm }}">CPPT</a></li>
+                nomorrm="<?php echo e($rm); ?>">CPPT</a></li>
         <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">E - Form</a></li>
-        {{-- <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Tindakan Medis</a></li>
-        <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Tindakan Medis & Order
-                Layanan</a></li> --}}
+        
     </ul>
 </div>
 <div class="card-body scroll">
     <div class="tab-content">
         <div class="active tab-pane" id="activity">
             <div class="post">
-                @foreach ($periode as $p)
+                <?php $__currentLoopData = $periode; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="card card-light collapsed-card">
                         <div class="card-header">
-                            <h3 class="card-title">{{ $p->tgl_masuk }}</h3>
+                            <h3 class="card-title"><?php echo e($p->tgl_masuk); ?></h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                         class="fas fa-plus"></i>
@@ -90,55 +88,28 @@
                                     <th>DOKTER</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($kunjungan as $r)
-                                        @if ($p->tgl_masuk == $r->TGL_MASUK)
+                                    <?php $__currentLoopData = $kunjungan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if($p->tgl_masuk == $r->TGL_MASUK): ?>
                                             <tr>
-                                                <td>{{ $r->TGL_MASUK }}</td>
-                                                <td>{{ $r->TGL_KELUAR }}</td>
-                                                <td>{{ $r->KONTER }}</td>
-                                                <td>{{ $r->NAMA_PX }}</td>
-                                                <td>{{ $r->NAMA_TARIF }}</td>
-                                                <td>{{ $r->PENJAMIN }}</td>
-                                                <td>{{ $r->SEQ_1 }}</td>
-                                                <td>{{ $r->NAMA_UNIT }}</td>
-                                                <td>{{ $r->NAMA_PARAMEDIS }}</td>
+                                                <td><?php echo e($r->TGL_MASUK); ?></td>
+                                                <td><?php echo e($r->TGL_KELUAR); ?></td>
+                                                <td><?php echo e($r->KONTER); ?></td>
+                                                <td><?php echo e($r->NAMA_PX); ?></td>
+                                                <td><?php echo e($r->NAMA_TARIF); ?></td>
+                                                <td><?php echo e($r->PENJAMIN); ?></td>
+                                                <td><?php echo e($r->SEQ_1); ?></td>
+                                                <td><?php echo e($r->NAMA_UNIT); ?></td>
+                                                <td><?php echo e($r->NAMA_PARAMEDIS); ?></td>
                                             </tr>
-                                        @endif
-                                    @endforeach
+                                        <?php endif; ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
                         </div>
                         <!-- /.card-body -->
                     </div>
-                @endforeach
-                {{-- <table class="table table-sm">
-                        <thead>
-                            <th>TGL MASUK</th>
-                            <th>TGL KELUAR</th>
-                            <th>COUNTER</th>
-                            <th>NAMA PASIEN</th>
-                            <th>NAMA TARIF</th>
-                            <th>PENJAMIN</th>
-                            <th>PELAYANAN</th>
-                            <th>UNIT</th>
-                            <th>DOKTER</th>
-                        </thead>
-                        <tbody>
-                            @foreach ($kunjungan as $r)
-                                <tr>
-                                    <td>{{ $r->TGL_MASUK }}</td>
-                <td>{{ $r->TGL_KELUAR }}</td>
-                <td>{{ $r->KONTER}}</td>
-                <td>{{ $r->NAMA_PX}}</td>
-                <td>{{ $r->NAMA_TARIF}}</td>
-                <td>{{ $r->PENJAMIN}}</td>
-                <td>{{ $r->SEQ_1}}</td>
-                <td>{{ $r->NAMA_UNIT}}</td>
-                <td>{{ $r->NAMA_PARAMEDIS}}</td>
-                </tr>
-                @endforeach
-                </tbody>
-                </table> --}}
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                
             </div>
         </div>
         <!-- /.tab-pane -->
@@ -177,13 +148,13 @@
                                     <th>Tarif</th>
                                 </thead>
                                 <tbody class="scroll">
-                                    @foreach ($tarif as $t)
-                                        <tr class="pilihtindakan" namatindakan="{{ $t->Tindakan }}"
-                                            tarif="{{ $t->tarif }}" kode="{{ $t->kode }}">
-                                            <td>{{ $t->Tindakan }}</td>
-                                            <td> RP. {{ $t->tarif }}</td>
+                                    <?php $__currentLoopData = $tarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <tr class="pilihtindakan" namatindakan="<?php echo e($t->Tindakan); ?>"
+                                            tarif="<?php echo e($t->tarif); ?>" kode="<?php echo e($t->kode); ?>">
+                                            <td><?php echo e($t->Tindakan); ?></td>
+                                            <td> RP. <?php echo e($t->tarif); ?></td>
                                         </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
                         </div>
@@ -201,9 +172,9 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Pilih dokter</label>
                                     <select class="form-control" id="dokterpemeriksa">
-                                        @foreach ($dokter as $d)
-                                            <option value="{{ $d->kode_dokter }}">{{ $d->nama_dokter }}</option>
-                                        @endforeach
+                                        <?php $__currentLoopData = $dokter; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($d->kode_dokter); ?>"><?php echo e($d->nama_dokter); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </select>
                                 </div>
 
@@ -259,7 +230,7 @@
         $.ajax({
             type: 'post',
             data: {
-                _token: "{{ csrf_token() }}",
+                _token: "<?php echo e(csrf_token()); ?>",
                 id,
                 tglmasuk,
                 nomorrm,
@@ -286,7 +257,7 @@
         $.ajax({
                 type: 'post',
                 data: {
-                    _token: "{{ csrf_token() }}",
+                    _token: "<?php echo e(csrf_token()); ?>",
                     nomorrm
                 },
                 url: '<?= route('tampilcppt') ?>',
@@ -315,7 +286,7 @@
             url: '<?= route('carilayanan') ?>',
             /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
             data: {
-                _token: "{{ csrf_token() }}",
+                _token: "<?php echo e(csrf_token()); ?>",
                 layanan: layanan
             },
             /* memanggil fungsi getDetail dan mengirimkannya */
@@ -363,7 +334,7 @@
                 type: 'post',
                 dataType: 'json',
                 data: {
-                    _token: "{{ csrf_token() }}",
+                    _token: "<?php echo e(csrf_token()); ?>",
                     data: JSON.stringify(data),
                     kodekunjungan: kodekunjungan,
                     dokterpemeriksa: dokterpemeriksa,
@@ -398,3 +369,4 @@
         });
     });
 </script>
+<?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm/pasienterpilih.blade.php ENDPATH**/ ?>
