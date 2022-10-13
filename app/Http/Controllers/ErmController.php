@@ -38,7 +38,9 @@ class ErmController extends BaseController
     public function tampilcppt(Request $request)
     {
         return view('erm.cppt', [
-            'ass_kep' =>  DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE no_rm = ?',[$request->nomorrm])
+            'ass_kep' =>  DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE no_rm = ?',[$request->nomorrm]),
+            'ass_med' =>  DB::select('SELECT * from erm_assesmen_awal_medis_rajal WHERE no_rm = ?',[$request->nomorrm]),
+            'join' => DB::select('SELECT * FROM erm_assesmen_keperawatan_rajal RIGHT OUTER JOIN erm_assesmen_awal_medis_rajal ON erm_assesmen_keperawatan_rajal.no_rm = erm_assesmen_awal_medis_rajal.no_rm WHERE erm_assesmen_keperawatan_rajal.no_rm = ?', [$request->nomorrm])
         ]);
     }
     public function formpasien(request $request)
@@ -179,7 +181,7 @@ class ErmController extends BaseController
             'ttv_freq_napas' => $dataSet['frekuensinapas_pasienbaru'],
             'ttv_freq_nadi' => $dataSet['frekuensinadi_pasienbaru'],
             'ttv_suhu' => $dataSet['suhu_pasienbaru'],
-            'riwayat_psikologis' => $dataSet['pekerjaan_pasienbaru'],
+            'riwayat_psikologis' => $dataSet['RP_pasienbaru'],
             'stafungsi_Alatbantu' => $dataSet['alatbantu_pasienbaru'],
             'stafungsi_cacattubuh' => $dataSet['cacat_pasienbaru'],
             'assesmen_nyeri' => $dataSet['nyeri_pasienbaru'],

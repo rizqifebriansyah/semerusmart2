@@ -24,6 +24,7 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <script type="text/javascript" src="{{ asset('public/signature/js/signature.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('public/semeru/dist/css/datepicker.css') }}" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -100,6 +101,6 @@
         @yield('container')
     </div>
     <!-- ./wrapper -->
-    @include('semeru.footer')  
+    @include('erm2.templates.footer')  
 </body>
 </html>

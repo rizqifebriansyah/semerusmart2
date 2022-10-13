@@ -30,3 +30,6 @@ Route::get('/caritarif', [ErmController::class, 'caritarif'])->name('caritarif')
 Route::get('/caritarif', [ErmController::class, 'caritarif'])->name('caritarif');
 
 Route::get('erm2', [Erm2Controller::class, 'index'])->name('erm2');
+Route::post('/ermform2', [Erm2Controller::class, 'formpasien'])->name('ermform2');
+Route::post('/pilihform2', [Erm2Controller::class, 'pilihform'])->name('pilihform2');
+Route::post('/simpanrm03', [Erm2Controller::class, 'simpanrm03'])->name('simpanrm03');

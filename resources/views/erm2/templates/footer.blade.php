@@ -20,8 +20,16 @@
 <script src="{{ asset('public/semeru/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('public/semeru/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('public/semeru/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('public/semeru/dist/js/bootstrap-datepicker.js') }}"></script>
+
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+    $(function() {
+        $(".datepicker").datepicker({
+            autoclose: true,
+            todayHighlight: true
+        }).datepicker('update', new Date());
+    });
   $(".preloader2").fadeOut();
     $(function() {
         $("#tabelpasienterpilih").DataTable({
@@ -52,6 +60,7 @@
       tglmasuk = $(this).attr('tglmasuk')
       counter = $(this).attr('counter')
       umur = $(this).attr('umur')
+      tglkunjugan = $(this).attr('tglkunjugan')
       $(".pasienterpilih").slideToggle("slow");
       document.getElementById("tabelpasien").style.display = "none";
       // $('#tabelpasien').attr('hidden',true)       
@@ -66,9 +75,10 @@
                   unit,
                   tglmasuk,
                   umur,
-                  counter
+                  counter,
+                  tglkunjugan
               },
-              url: '<?= route('ermform') ?>',
+              url: '<?= route('ermform2') ?>',
               error: function(data) {
                   spinner.hide();
                  alert('error')

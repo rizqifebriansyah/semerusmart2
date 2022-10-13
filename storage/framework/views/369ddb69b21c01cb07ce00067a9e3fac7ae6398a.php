@@ -2,15 +2,17 @@
     <div class="card-header">CATATAN PERKEMBANGAN PASIEN TERINTEGRASI ( CPPT )</div>
     <div class="card-body">
         <div class="row">
-            <div class="col-md-6">
-                <table class="table table-sm table-bordered text-xs">
+            <div class="col-md-12">
+                <table class="table table-sm table-bordered text-md">
                    <thead>
                     <th>Tanggal / Jam</th>
                     <th>Profesi</th>
                     <th class="text-center">Hasil Pemeriksaan, Analisa, Rencana, Penatalaksanaan Pasien ( Ditulis dengan format SOAP, disertai target yang terukur, evaluasi hasil, tata laksana dituliskan dalam assesmen.</th>
+                    <th>Instruksi tenaga kesehatan termasuk pasca bedah / prosedur ( instruksi ditulis dengan rinci dan jelas )</th>
+                    <th>Verifikasi DPJP</th>
                    </thead>
                    <tbody>
-                    <?php $__currentLoopData = $ass_kep; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $join; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                             <td><?php echo e($d->tglwaktu_assesmen); ?></td>
                             <td>Perawat Ruangan</td>
@@ -52,11 +54,14 @@
                                     </div>
                                 </div>
                             </td>
+                            <td> <?php echo e($d->rencana_terapi); ?></td>
+                            <td><img src="<?php echo e($d->signature); ?>" alt=""></td>
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                    </tbody>
                 </table>
             </div>
+            
         </div>        
     </div>
 </div><?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm/cppt.blade.php ENDPATH**/ ?>
