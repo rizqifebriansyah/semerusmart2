@@ -28,6 +28,8 @@ class LoginController extends BaseController
             $hak = auth()->user()->hak_akses;
             if($hak == 2){
                 return redirect()->intended('erm');
+            }if($hak == 3){
+                return redirect()->intended('erm2');
             }
         } 
         return back()->with('loginError', 'Login gagal !');
