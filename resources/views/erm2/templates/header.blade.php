@@ -100,6 +100,6 @@
         @yield('container')
     </div>
     <!-- ./wrapper -->
-    @include('erm2.templates.footer')  
+    @include('semeru.footer')  
 </body>
 </html>
