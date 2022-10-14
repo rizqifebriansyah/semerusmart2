@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> c8bbb7f372806c2fc31954b58f28d6eac4cdf25f
 <?php $__env->startSection('container'); ?>
 <div class="container-fluid" style="margin-top:130px">
         <div id="tabelpasien" class="container" >
@@ -17,7 +14,7 @@
                 </thead>
                 <tbody>
                     <?php $__currentLoopData = $pasien; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                        
-                    <tr class="pilihpasien toastsDefaultSuccess" nomor-rm="<?php echo e($p->no_rm); ?>" nama="<?php echo e($p->nama); ?>" kodekunjungan="<?php echo e($p->kode_kunjungan); ?>" alamat="<?php echo e($p->alamat); ?>" counter="<?php echo e($p->counter); ?>"umur="<?php echo e($p->umur); ?>" unit="<?php echo e($p->unit); ?>" tglmasuk = <?php echo e($p->tgl_masuk); ?>>
+                    <tr class="pilihpasien toastsDefaultSuccess" nomor-rm="<?php echo e($p->no_rm); ?>" tglkunjugan="<?php echo e($p->tgl_masuk); ?>" nama="<?php echo e($p->nama); ?>" kodekunjungan="<?php echo e($p->kode_kunjungan); ?>" alamat="<?php echo e($p->alamat); ?>" counter="<?php echo e($p->counter); ?>"umur="<?php echo e($p->umur); ?>" unit="<?php echo e($p->unit); ?>" tglmasuk = <?php echo e($p->tgl_masuk); ?>>
                         <td><?php echo e($p->kode_kunjungan); ?></td>
                         <td><?php echo e($p->no_rm); ?></td>
                         <td><?php echo e($p->nama); ?></td>
@@ -36,5 +33,4 @@
         <!-- /.card -->
     </div>
 <?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('semeru.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('erm2.templates.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm2/index.blade.php ENDPATH**/ ?>
