@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\assesmenawal;
 use App\Models\assesmenawal_med;
-
-
 class Erm2Controller extends BaseController
 {
     public function index()
@@ -362,7 +360,7 @@ class Erm2Controller extends BaseController
         ];
         echo json_encode($data);
         die;
-        $erm_assesmen = erm_assesmen_keperawatan_rajal::create($data);
+        $erm_assesmen = assesmenawal::create($data);
         dd($erm_assesmen);
     }
     public function  simpanformlab(Request $request)

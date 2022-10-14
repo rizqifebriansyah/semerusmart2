@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ErmController;
+use App\Http\Controllers\Erm2Controller;
 
 Route::get('/', [LoginController::class, 'index']);
 Route::post('login', [LoginController::class, 'authenticate'])->middleware('guest')->name('login');
@@ -27,3 +28,6 @@ Route::post('/simpanradiologi', [ErmController::class, 'simpanradiologi'])->name
 Route::post('/simpanlayanan', [ErmController::class, 'simpanlayanan'])->name('simpanlayanan');
 Route::get('/caritarif', [ErmController::class, 'caritarif'])->name('caritarif');
 Route::get('/caritarif', [ErmController::class, 'caritarif'])->name('caritarif');
+
+Route::get('/ermdokter', [Erm2Controller::class, 'index'])->name('ermdokter');
+Route::get('/ermform2', [Erm2Controller::class, 'pilihform'])->name('ermform2');
