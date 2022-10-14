@@ -239,8 +239,8 @@ class ErmController extends BaseController
             }
         }
         $data = [
-            'tglwaktu_assesmen' => $dataSet['tgldanjamkunjungan_pasienlama'],
-            'kode_kunjungan' => $dataSet['kode_kunjungan'],
+            'kode_kunjungan' => $dataSet['kodekunjungan'],
+            'tglwaktu_assesmen' => $dataSet['tgldanjamkunjungan_pasienbaru'],
             'no_rm' => $dataSet['rm'],
             'sumber_data' => $dataSet['sumberdata_pasienlama'],
             'keluhan_utama' => $dataSet['keluhanutama_pasienlama'],
@@ -297,8 +297,44 @@ class ErmController extends BaseController
                 ];
                 echo json_encode($data);
                 die;
+                
             }
         }
+        $data = [
+            'tglwaktu_assesmen' => $dataSet['tgldanjamkunjungan_pasienanak'],
+            'kode_kunjungan' => $dataSet['kodekunjungan'],
+            'no_rm' => $dataSet['rm'],
+            'keluhan_utama' => $dataSet['keluhanutama_pasienanak'],
+            'ttv_tekanan_darah' => $dataSet['tekanandarah_pasienanak'],
+            'ttv_freq_napas' => $dataSet['frekuensinapas_pasienanak'],
+            'ttv_freq_nadi' => $dataSet['frekuensinadi_pasienanak'],
+            'ttv_suhu' => $dataSet['suhu_pasienanak'],
+            'stafungsi_Alatbantu' => $dataSet['alatbantu_pasienanak'],
+            'stafungsi_cacattubuh' => $dataSet['cacat_pasienanak'],
+            'assesmen_nyeri' => $dataSet['skalanyeripasienanak'],
+            'assesmen_nyeri_mtd_wbfc_face' => $dataSet['wajah_pasienanak'],
+            'assesmen_nyeri_mtd_wbfc_leg' => $dataSet['kaki_pasienanak'],
+            'assesmen_nyeri_mtd_wbfc_act' => $dataSet['activity_pasienanak'],
+            'assesmen_nyeri_mtd_wbfc_cry' => $dataSet['cry_pasienanak'],
+            'assesmen_nyeri_mtd_wbfc_cons' => $dataSet['consolabity_pasienanak'],
+            'assesmen_nyeri_mtd_nips_Eks_face' => $dataSet['ekspresi_pasienanak'],
+            'assesmen_nyeri_mtd_nips_cry' => $dataSet['nangis_pasienanak'],
+            'assesmen_nyeri_mtd_nips_polanapas' => $dataSet['pola_pasienanak'],
+            'assesmen_nyeri_mtd_nips_lengan' => $dataSet['l_pasienanak'],
+            'assesmen_nyeri_mtd_nips_kaki' => $dataSet['k_pasienanak'],
+            'assesmen_nyeri_mtd_nips_keadaanterangsang' => $dataSet['terangsang_pasienanak'],
+            'assesmen_nyeri_mtd_hd_umur' => $dataSet['umur_pasienanak'],
+            'assesmen_nyeri_mtd_hd_jeniskelamin' => $dataSet['jk_pasienanak'],
+            'assesmen_nyeri_mtd_hd_diagnosis' => $dataSet['diagnosis_pasienanak'],
+            'assesmen_nyeri_mtd_hd_gangkognitif' => $dataSet['kognitif_pasienanak'],
+            'assesmen_nyeri_mtd_hd_faklingkungan' => $dataSet['fl_pasienanak'],
+            'assesmen_nyeri_mtd_hd_responobat' => $dataSet['rsp_pasienanak'],
+            'assesmen_nyeri_mtd_hd_pengguaanobat' => $dataSet['obat_pasienanak'],
+            'tgl_selesai' => $dataSet['tanggal_assesmen'],
+            'id_perawat' => $dataSet['id_perawat'],
+            'ttd_perawat' => $dataSet['signature'],
+        ];
+        $erm_assesmen = assesmenawal::create($data);
 
         $data = [
             'kode_kunjungan' => $dataSet['kodekunjungan']
@@ -309,8 +345,7 @@ class ErmController extends BaseController
         ];
         echo json_encode($data);
         die;
-        $erm_assesmen = erm_assesmen_keperawatan_rajal::create($data);
-        dd($erm_assesmen);
+       
     }
     public function  simpanformlab(Request $request)
     {

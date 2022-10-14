@@ -89,4 +89,4 @@
         spinner.show();
     }
 </script>
-<?php /**PATH C:\xampp\htdocs\semerusmart3\resources\views/semeru/footer.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/semeru/footer.blade.php ENDPATH**/ ?>

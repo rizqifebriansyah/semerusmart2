@@ -1363,4 +1363,4 @@
         });
     });
 </script>
-<?php /**PATH C:\xampp\htdocs\semerusmart3\resources\views/erm/formlaboratorium.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm/formlaboratorium.blade.php ENDPATH**/ ?>
