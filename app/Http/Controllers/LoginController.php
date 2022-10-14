@@ -29,6 +29,9 @@ class LoginController extends BaseController
             if($hak == 2){
                 return redirect()->intended('erm');
             }
+            if($hak == 3){
+                return redirect()->intended('/ermdokter');
+            }
         } 
         return back()->with('loginError', 'Login gagal !');
     }
