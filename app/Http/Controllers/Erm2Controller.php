@@ -8,16 +8,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\assesmenawal;
-use App\Models\assemenawalmedis;
-
+use App\Models\assesmenawal_med;
 
 class Erm2Controller extends BaseController
 {
     public function index()
     {
         $unit = auth()->user()->unit;
-        $pasien_poli = DB::select('select kode_kunjungan,fc_nama_px(no_rm) as nama,no_rm,fc_umur(no_rm) as umur, fc_alamat4(no_rm) as alamat , fc_nama_unit1(kode_unit) as unit,tgl_masuk, kelas, counter from ts_kunjungan where kode_unit = ? and status_kunjungan = ?', [$unit, 1]);
-        return view('erm.index', [
+        $pasien_poli = DB::select('SELECT *,fc_nama_px(ts_kunjungan.no_rm) AS nama,fc_umur(ts_kunjungan.no_rm) as umur, fc_alamat4(ts_kunjungan.no_rm) as alamat,fc_nama_unit1(ts_kunjungan.kode_unit) as unit ,erm_assesmen_keperawatan_rajal.no_rm as rm FROM ts_kunjungan RIGHT OUTER JOIN erm_assesmen_keperawatan_rajal ON ts_kunjungan.kode_kunjungan = erm_assesmen_keperawatan_rajal.kode_kunjungan WHERE ts_kunjungan.status_kunjungan = ? AND ts_kunjungan.kode_unit = ?', [1, $unit]);
+        return view('erm2.index', [
             'menu' => 2,
             'title' => 'Semerusmart | E-RM',
             'pasien' => $pasien_poli
