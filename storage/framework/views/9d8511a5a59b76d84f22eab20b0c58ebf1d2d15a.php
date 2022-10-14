@@ -255,7 +255,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorwajah" id="skorwajah"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -285,7 +285,7 @@
                             </div>
                         </td>
                         <td rowspan="2">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorposisikaki" id="skorposisikaki"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -315,7 +315,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skoract" id="skoract"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -346,7 +346,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorcry" id="skorcry"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -378,7 +378,7 @@
                         </td>
 
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorconsolabity" id="skorconsolabity"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -426,7 +426,7 @@
                             </div>
                         </td>
                         <td rowspan="2">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorekspresiwajah" id="skorekspresiwajah"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -448,7 +448,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skormenangis" id="skormenangis"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -478,7 +478,7 @@
                             </div>
                         </td>
                         <td rowspan="2">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorpolanapas" id="skorpolanapas"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -490,7 +490,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>4. Lengan kaki</td>
+                        <td>4. Lengan </td>
                     </tr>
                     <tr>
                         <td>
@@ -499,8 +499,8 @@
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
-                        <td rowspan="4">
-                            <textarea readonly class="form-control"></textarea>
+                        <td rowspan="2">
+                            <textarea readonly class="form-control" name="skorlengan" id="skorlengan"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -512,11 +512,17 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>5. kaki</td>
+                    </tr>
+                    <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="k_pasienanak" id="k_pasienanak" value="Rileks" skor="1">
+                                <input checked type="radio" class="text-center form-check-input" name="k_pasienanak" id="k_pasienanak" value="Rileks" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
+                        </td>
+                        <td rowspan="2">
+                            <textarea readonly class="form-control" name="skorkaki" id="skorkaki"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -528,7 +534,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>5. Terangsang</td>
+                        <td>6. Terangsang</td>
                     </tr>
                     <tr>
                         <td>
@@ -537,7 +543,7 @@
                                 <label class="form-check-label" for="inlineRadio2"> Tidur</label>
                             </div>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorrangsang" id="skorrangsang"></textarea>
                         </td>
                         </td>
                     </tr>
@@ -583,7 +589,7 @@
                             </div>
                         </td>
                         <td rowspan="4">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorumur" id="skorumur"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -621,7 +627,7 @@
                             </div>
                         </td>
                         <td rowspan="2">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorjk" id="skorjk"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -643,7 +649,7 @@
                             </div>
                         </td>
                         <td rowspan="4">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skordiagnosa" id="skordiagnosa"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -681,7 +687,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorkognitif" id="skorkognitif"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -711,7 +717,7 @@
                             </div>
                         </td>
                         <td rowspan="4">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorfaktorlingkungan" id="skorfaktorlingkungan"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -749,7 +755,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorrespon" id="skorrespon"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -785,7 +791,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control"></textarea>
+                            <textarea readonly class="form-control" name="skorpenggunaanobat" id="skorpenggunaanobat"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -802,6 +808,12 @@
                                 <input type="radio" class="text-center form-check-input" name="obat_pasienanak" id="obat_pasienanak" value="penggunaan obat lainya" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> penggunaan obat lainya</label>
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Total skor</td>
+                        <td rowspan="3">
+                            <textarea readonly class="form-control" name="totalskor" id="totalskor"></textarea>
                         </td>
                     </tr>
                 </tbody>
@@ -853,8 +865,8 @@
         });
         $(document).ready(function() {
             $(".tombol-simpanrmanak").click(function() {
-                cacatpasienanak = $('#cacat_pasienanak').val()
-                nyeri_pasienanak = $('#nyeri_pasienanak').val()
+                cacatpasienanak = $('#cacat_pasienanak:checked').val()
+                nyeri_pasienanak = $('#nyeri_pasienanakchecked').val()
 
                 if (cacatpasienanak == ' Ya') {
                     namacacat = $('#namacacatubuh').val()
@@ -935,6 +947,342 @@
                     }
                 });
 
+            });
+            $(".wajah_pasienanak").click(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat ekspresi wajah',
+                        text: 'lengkapi keterangan ekspresiwajah',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorwajah').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorposisikaki').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".kaki_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat pergerakan pada kaki',
+                        text: 'lengkapi keterangan posisi kaki',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorposisikaki').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skoract').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".activity_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat pergerakan pada activity',
+                        text: 'lengkapi keterangan activity',
+                        footer: ''
+                    })
+                } else {
+                    $('#skoract').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorcry').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".cry_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat tangisan',
+                        text: 'lengkapi keterangan tangisan',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorcry').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorconsolabity').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".consolabity_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat consolabity',
+                        text: 'lengkapi keterangan consolabity',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorconsolabity').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorekspresiwajah').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".ekspresi_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat ekspresi',
+                        text: 'lengkapi keterangan ekspresi',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorekspresiwajah').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skormenangis').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".nangis_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat tangisan',
+                        text: 'lengkapi keterangan tangis',
+                        footer: ''
+                    })
+                } else {
+                    $('#skormenangis').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorpolanapas').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".pola_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat pola',
+                        text: 'lengkapi keterangan pola',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorpolanapas').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorlengan').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".l_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter pada lengan',
+                        text: 'lengkapi keterangan lengan',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorlengan').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorkaki').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".k_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter pada kaki',
+                        text: 'lengkapi keterangan kaki',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorkaki').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorrangsang').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".terangsang_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter rangsangan',
+                        text: 'lengkapi keterangan rangsangan',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorrangsang').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorumur').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".umur_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 4) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter umur',
+                        text: 'lengkapi keterangan umur',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorumur').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorjk').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".jk_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter jenis kelamin',
+                        text: 'lengkapi keterangan jenis kelamin',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorjk').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skordiagnosa').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".diagnosis_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 4) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter diagnosis',
+                        text: 'lengkapi keterangan diagnosis',
+                        footer: ''
+                    })
+                } else {
+                    $('#skordiagnosa').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorkognitif').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".kognitif_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 3) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter kognitif',
+                        text: 'lengkapi keterangan kognitif',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorkognitif').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorfaktorlingkungan').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".fl_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 4) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter faktor lingkungan',
+                        text: 'lengkapi keterangan faktor lingkungan',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorfaktorlingkungan').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorrespon').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".rsp_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 3) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter respon',
+                        text: 'lengkapi keterangan respon',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorrespon').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorpenggunaanobar').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".obat_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter penggunaanobat',
+                        text: 'lengkapi keterangan penggunaanobat',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorpenggunaanobat').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorwajah').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".cacat_pasienanak").click(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    document.getElementById("namacacatubuh").focus();
+                    $('#namacacatubuh').val('')
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Ada cacat tubuh pasien...',
+                        text: 'Silahkan ketik keterangan cacat tubuh',
+                        footer: ''
+                    })
+                } else {
+                    $('#namacacatubuh').val('Tidak ada')
+                }
+            });
+            $(".nyeri_pasienanak").click(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    document.getElementById("skalanyeripasienanak").focus();
+                    $('#skalanyeripasienanak').val('')
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Ada keluhan nyeri ...',
+                        text: 'Silahkan input skala nyeri ...',
+                        footer: ''
+                    })
+                } else {
+                    $('#skalanyeripasienanak').val('0')
+                }
             });
         });
     </script>

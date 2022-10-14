@@ -499,7 +499,7 @@
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
-                        <td rowspan="4">
+                        <td rowspan="2">
                             <textarea readonly class="form-control" name="skorlengan" id="skorlengan"></textarea>
                         </td>
                     </tr>
@@ -512,7 +512,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>5.  kaki</td>
+                        <td>5. kaki</td>
                     </tr>
                     <tr>
                         <td>
@@ -521,7 +521,7 @@
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
-                        <td rowspan="4">
+                        <td rowspan="2">
                             <textarea readonly class="form-control" name="skorkaki" id="skorkaki"></textarea>
                         </td>
                     </tr>
@@ -791,7 +791,7 @@
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control" name="skorpenggunaanobar" id="skorpenggunaanobat"></textarea>
+                            <textarea readonly class="form-control" name="skorpenggunaanobat" id="skorpenggunaanobat"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -948,16 +948,16 @@
                 });
 
             });
-            $(".wajah_pasienanak").click(function(){
+            $(".wajah_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat ekspresi wajah',
                         text: 'lengkapi keterangan ekspresiwajah',
                         footer: ''
                     })
-                }else {
+                } else {
                     $('#skorwajah').val(skor)
                     skor1 = skor
                     skor2 = $('#skorposisikaki').val()
@@ -965,242 +965,323 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".kaki_pasienanak").clicik(function(){
+            $(".kaki_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pergerakan pada kaki',
                         text: 'lengkapi keterangan posisi kaki',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorposisikaki').val(skor)
                     skor1 = skor
                     skor2 = $('#skoract').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".activity_pasienanak").clicik(function(){
+            $(".activity_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pergerakan pada activity',
                         text: 'lengkapi keterangan activity',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skoract').val(skor)
                     skor1 = skor
                     skor2 = $('#skorcry').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".cry_pasienanak").clicik(function(){
+            $(".cry_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat tangisan',
                         text: 'lengkapi keterangan tangisan',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorcry').val(skor)
                     skor1 = skor
                     skor2 = $('#skorconsolabity').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".consolabity_pasienanak").clicik(function(){
+            $(".consolabity_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat consolabity',
                         text: 'lengkapi keterangan consolabity',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorconsolabity').val(skor)
                     skor1 = skor
                     skor2 = $('#skorekspresiwajah').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".ekspresi_pasienanak").clicik(function(){
+            $(".ekspresi_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 1) {
                     Swal.fire({
                         icon: 'warning',
-                        title: 'terdapat ekspresi', 
+                        title: 'terdapat ekspresi',
                         text: 'lengkapi keterangan ekspresi',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorekspresiwajah').val(skor)
                     skor1 = skor
                     skor2 = $('#skormenangis').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".nangis_pasienanak").clicik(function(){
+            $(".nangis_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 2){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat tangisan',
                         text: 'lengkapi keterangan tangis',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skormenangis').val(skor)
                     skor1 = skor
                     skor2 = $('#skorpolanapas').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".pola_pasienanak").clicik(function(){
+            $(".pola_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 1) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pola',
                         text: 'lengkapi keterangan pola',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorpolanapas').val(skor)
                     skor1 = skor
                     skor2 = $('#skorlengan').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".l_pasienanak").clicik(function(){
+            $(".l_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 1) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter pada lengan',
                         text: 'lengkapi keterangan lengan',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorlengan').val(skor)
                     skor1 = skor
                     skor2 = $('#skorkaki').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".k_pasienanak").clicik(function(){
+            $(".k_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 1) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter pada kaki',
                         text: 'lengkapi keterangan kaki',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorkaki').val(skor)
                     skor1 = skor
                     skor2 = $('#skorrangsang').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".terangsang_pasienanak").clicik(function(){
+            $(".terangsang_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 1) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter rangsangan',
                         text: 'lengkapi keterangan rangsangan',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorrangsang').val(skor)
                     skor1 = skor
                     skor2 = $('#skorumur').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".umur_pasienanak").clicik(function(){
+            $(".umur_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 4) {
                     Swal.fire({
                         icon: 'warning',
-                        title: 'terdapat parameter rangsangan',
-                        text: 'lengkapi keterangan rangsangan',
+                        title: 'terdapat parameter umur',
+                        text: 'lengkapi keterangan umur',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorumur').val(skor)
                     skor1 = skor
                     skor2 = $('#skorjk').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".jk_pasienanak").clicik(function(){
+            $(".jk_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 2) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter jenis kelamin',
                         text: 'lengkapi keterangan jenis kelamin',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skorjk').val(skor)
                     skor1 = skor
                     skor2 = $('#skordiagnosa').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".diagnosis_pasienanak").clicik(function(){
+            $(".diagnosis_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 4) {
                     Swal.fire({
                         icon: 'warning',
-                        title: 'terdapat parameter rangsangan',
-                        text: 'lengkapi keterangan rangsangan',
+                        title: 'terdapat parameter diagnosis',
+                        text: 'lengkapi keterangan diagnosis',
                         footer: ''
                     })
-                }else{
+                } else {
                     $('#skordiagnosa').val(skor)
                     skor1 = skor
                     skor2 = $('#skorkognitif').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
                 }
             });
-            $(".kognitif_pasienanak").clicik(function(){
+            $(".kognitif_pasienanak").clicik(function() {
                 skor = $(this).attr('skor')
-                if(skor == 1){
+                if (skor == 3) {
                     Swal.fire({
                         icon: 'warning',
-                        title: 'terdapat parameter rangsangan',
-                        text: 'lengkapi keterangan rangsangan',
+                        title: 'terdapat parameter kognitif',
+                        text: 'lengkapi keterangan kognitif',
                         footer: ''
                     })
-                }else{
-                    $('#skordiagnosa').val(skor)
+                } else {
+                    $('#skorkognitif').val(skor)
                     skor1 = skor
-                    skor2 = $('#skorkognitif').val()
+                    skor2 = $('#skorfaktorlingkungan').val()
                     total = parseInt(skor1) + parseInt(skor2)
-                    $('totalskor').val(total)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".fl_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 4) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter faktor lingkungan',
+                        text: 'lengkapi keterangan faktor lingkungan',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorfaktorlingkungan').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorrespon').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".rsp_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 3) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter respon',
+                        text: 'lengkapi keterangan respon',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorrespon').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorpenggunaanobar').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".obat_pasienanak").clicik(function() {
+                skor = $(this).attr('skor')
+                if (skor == 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'terdapat parameter penggunaanobat',
+                        text: 'lengkapi keterangan penggunaanobat',
+                        footer: ''
+                    })
+                } else {
+                    $('#skorpenggunaanobat').val(skor)
+                    skor1 = skor
+                    skor2 = $('#skorwajah').val()
+                    total = parseInt(skor1) + parseInt(skor2)
+                    $('#totalskor').val(total)
+                }
+            });
+            $(".cacat_pasienanak").click(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    document.getElementById("namacacatubuh").focus();
+                    $('#namacacatubuh').val('')
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Ada cacat tubuh pasien...',
+                        text: 'Silahkan ketik keterangan cacat tubuh',
+                        footer: ''
+                    })
+                } else {
+                    $('#namacacatubuh').val('Tidak ada')
+                }
+            });
+            $(".nyeri_pasienanak").click(function() {
+                skor = $(this).attr('skor')
+                if (skor == 2) {
+                    document.getElementById("skalanyeripasienanak").focus();
+                    $('#skalanyeripasienanak').val('')
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Ada keluhan nyeri ...',
+                        text: 'Silahkan input skala nyeri ...',
+                        footer: ''
+                    })
+                } else {
+                    $('#skalanyeripasienanak').val('0')
                 }
             });
         });

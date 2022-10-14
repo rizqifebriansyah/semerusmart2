@@ -38,7 +38,7 @@ class ErmController extends BaseController
     public function tampilcppt(Request $request)
     {
         return view('erm.cppt', [
-            'ass_kep' =>  DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE no_rm = ?',[$request->nomorrm])
+            'ass_kep' =>  DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE no_rm = ?', [$request->nomorrm])
         ]);
     }
     public function formpasien(request $request)
@@ -198,10 +198,10 @@ class ErmController extends BaseController
             'kode_unit' => auth()->user()->unit
         ];
         $now = date('Y-m-d');
-        $cek = DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE date(tglwaktu_assesmen) = ? AND no_rm = ? AND kode_unit = ?',[$now,$dataSet['rm'],auth()->user()->unit]);
-        if(count($cek) > 0){
+        $cek = DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE date(tglwaktu_assesmen) = ? AND no_rm = ? AND kode_unit = ?', [$now, $dataSet['rm'], auth()->user()->unit]);
+        if (count($cek) > 0) {
             assesmenawal::whereRaw('no_rm = ? and kode_unit = ? and date( tglwaktu_assesmen ) = ?', array($dataSet['rm'], auth()->user()->unit, $now))->update($data);
-        }else{
+        } else {
             $erm_assesmen = assesmenawal::create($data);
         }
 
@@ -264,8 +264,13 @@ class ErmController extends BaseController
             'id_perawat' => $dataSet['id_perawat'],
             'ttd_perawat' => $dataSet['signature'],
         ];
-
-        $erm_assesmen_awal = assesmenawal::create($data);
+        $now = date('Y-m-d');
+        $cek = DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE date(tglwaktu_assesmen) = ? AND no_rm = ? AND kode_unit = ?', [$now, $dataSet['rm'], auth()->user()->unit]);
+        if (count($cek) > 0) {
+            assesmenawal::whereRaw('no_rm = ? and kode_unit = ? and date( tglwaktu_assesmen ) = ?', array($dataSet['rm'], auth()->user()->unit, $now))->update($data);
+        } else {
+            $erm_assesmen = assesmenawal::create($data);
+        }
 
         $data = [
             'kode_kunjungan' => $dataSet['kodekunjungan']
@@ -297,7 +302,6 @@ class ErmController extends BaseController
                 ];
                 echo json_encode($data);
                 die;
-                
             }
         }
         $data = [
@@ -334,7 +338,13 @@ class ErmController extends BaseController
             'id_perawat' => $dataSet['id_perawat'],
             'ttd_perawat' => $dataSet['signature'],
         ];
-        $erm_assesmen = assesmenawal::create($data);
+        $now = date('Y-m-d');
+        $cek = DB::select('SELECT * from erm_assesmen_keperawatan_rajal WHERE date(tglwaktu_assesmen) = ? AND no_rm = ? AND kode_unit = ?', [$now, $dataSet['rm'], auth()->user()->unit]);
+        if (count($cek) > 0) {
+            assesmenawal::whereRaw('no_rm = ? and kode_unit = ? and date( tglwaktu_assesmen ) = ?', array($dataSet['rm'], auth()->user()->unit, $now))->update($data);
+        } else {
+            $erm_assesmen = assesmenawal::create($data);
+        }
 
         $data = [
             'kode_kunjungan' => $dataSet['kodekunjungan']
@@ -345,7 +355,6 @@ class ErmController extends BaseController
         ];
         echo json_encode($data);
         die;
-       
     }
     public function  simpanformlab(Request $request)
     {
