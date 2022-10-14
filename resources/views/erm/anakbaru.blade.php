@@ -819,7 +819,7 @@
                         </td>
 
                         <td>
-                            <textarea readonly disabled name="nama_perawat" class="form-control" id="nama_perawat" name="tanggal_assesmen" cols="30" rows="2">{{ strtoupper(auth()->user()->name) }}</textarea>
+                            <textarea readonly disabled name="nama_perawat" class="form-control" id="nama_perawat" name="nama_perawat" cols="30" rows="2">{{ strtoupper(auth()->user()->name) }}</textarea>
                             <textarea hidden name="id_perawat" id="id_perawat" cols="50" rows="10">{{ strtoupper(auth()->user()->id) }}</textarea>
                         </td>
                         <td>

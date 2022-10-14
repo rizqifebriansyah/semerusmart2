@@ -260,9 +260,10 @@ class ErmController extends BaseController
             'tindakan_perawat' => $dataSet['tindakankeperawatan'],
             'rencana_perawat' => $dataSet['rencanakeperawatan'],
             'evaluasi_perawat' => $dataSet['evaluasikeperawatan'],
-            'tgl_selesai' => $dataSet['tanggal_assesmen'],
+            'tgl_selesai' => Carbon::now()->timezone('Asia/Jakarta'),
             'id_perawat' => $dataSet['id_perawat'],
             'ttd_perawat' => $dataSet['signature'],
+            'kode_unit' => auth()->user()->unit,
         ];
 
         $erm_assesmen_awal = assesmenawal::create($data);
@@ -330,9 +331,11 @@ class ErmController extends BaseController
             'assesmen_nyeri_mtd_hd_faklingkungan' => $dataSet['fl_pasienanak'],
             'assesmen_nyeri_mtd_hd_responobat' => $dataSet['rsp_pasienanak'],
             'assesmen_nyeri_mtd_hd_pengguaanobat' => $dataSet['obat_pasienanak'],
-            'tgl_selesai' => $dataSet['tanggal_assesmen'],
+            'tgl_selesai' => Carbon::now()->timezone('Asia/Jakarta'),
             'id_perawat' => $dataSet['id_perawat'],
             'ttd_perawat' => $dataSet['signature'],
+            'kode_unit' => auth()->user()->unit
+
         ];
         $erm_assesmen = assesmenawal::create($data);
 
