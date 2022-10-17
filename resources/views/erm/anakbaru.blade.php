@@ -198,11 +198,11 @@
                     <td>Cacat Tubuh</td>
                     <td colspan="4">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input ml-2 mr-3" type="radio" name="cacat_pasienanak" id="cacat_pasienanak" value="Tidak" checked>
+                            <input class="form-check-input  ml-2 mr-3 cacat_pasienanak1" skor="1" type="radio" name="cacat_pasienanak" id="cacat_pasienanak" value="Tidak" checked>
                             <label class="form-check-label" for="inlineRadio1">Tidak</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input ml-2 mr-3" type="radio" name="cacat_pasienanak" id="cacat_pasienanak" value="Ada">
+                            <input class="form-check-input  ml-2 mr-3 cacat_pasienanak1" skor="2"  type="radio" name="cacat_pasienanak" id="cacat_pasienanak" value="Ada">
                             <label class="form-check-label" for="inlineRadio1">Ada</label>
                         </div>
                         <input type="text" class="form-control form-control-sm" id="namacacatubuh" name="namacacatubuh" placeholder="Sebutkan cacat tubuh ..." value="tidak ada">
@@ -219,11 +219,11 @@
                     <td>Apakah Pasien Mengeluh Nyeri</td>
                     <td colspan="4">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input ml-2 mr-3" type="radio" name="nyeri_pasienanak" id="nyeri_pasienanak" value="Tidak" checked>
+                            <input class="form-check-input ml-2 mr-3 nyeri_pasienanak" type="radio" name="nyeri_pasienanak" skor="1" id="nyeri_pasienanak" value="Tidak" checked>
                             <label class="form-check-label" for="inlineRadio1">Tidak</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input mr-3" type="radio" name="nyeri_pasienanak" id="nyeri_pasienanak" value="Ya">
+                            <input class="form-check-input mr-3 nyeri_pasienanak" type="radio" name="nyeri_pasienanak" skor="2" id="nyeri_pasienanak" value="Ya">
                             <label class="form-check-label" for="inlineRadio2">Ya</label>
                         </div>
                         <input type="text" id="skalanyeripasienanak" name="skalanyeripasienanak" class="form-control form-control-sm" placeholder="skala nyeri ...">
@@ -250,18 +250,18 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="wajah_pasienanak" id="wajah_pasienanak" value="Tidak ada ekpresi khusus, senyum" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input wajah_pasienanak" name="wajah_pasienanak" id="wajah_pasienanak" value="Tidak ada ekpresi khusus, senyum" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> Tidak ada ekpresi khusus, senyum</label>
                             </div>
                         </td>
                         <td rowspan="3">
-                            <textarea readonly class="form-control" name="skorwajah" id="skorwajah"></textarea>
+                            <textarea readonly class="form-control " name="skorwajah" id="skorwajah"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="wajah_pasienanak" id="wajah_pasienanak" value="Menyeringa, mengerukan dahi, tampak tidak teratrik (kadang-kadanag)" skor="1">
+                                <input type="radio" class="text-center form-check-input wajah_pasienanak" name="wajah_pasienanak" id="wajah_pasienanak" value="Menyeringa, mengerukan dahi, tampak tidak teratrik (kadang-kadanag)" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Menyeringa, mengerukan dahi, tampak tidak teratrik (kadang-kadanag)</label>
                             </div>
                         </td>
@@ -269,7 +269,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="wajah_pasienanak" id="wajah_pasienanak" value="Dagu gemetar, gerutu berulang(sering)" skor="2">
+                                <input type="radio" class="text-center form-check-input wajah_pasienanak" name="wajah_pasienanak" id="wajah_pasienanak" value="Dagu gemetar, gerutu berulang(sering)" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> Dagu gemetar, gerutu berulang(sering)</label>
                             </div>
                         </td>
@@ -280,18 +280,18 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kaki_pasienanak" id="kaki_pasienanak" value="osisi normal atau santai" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input kaki_pasienanak" name="kaki_pasienanak" id="kaki_pasienanak" value="Posisi normal atau santai" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> Posisi normal atau santai</label>
                             </div>
                         </td>
                         <td rowspan="2">
-                            <textarea readonly class="form-control" name="skorposisikaki" id="skorposisikaki"></textarea>
+                            <textarea readonly class="form-control " name="skorposisikaki" id="skorposisikaki"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kaki_pasienanak" id="kaki_pasienanak" value="Gelisah, tegang" skor="1">
+                                <input type="radio" class="text-center form-check-input kaki_pasienanak" name="kaki_pasienanak" id="kaki_pasienanak" value="Gelisah, tegang" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Gelisah, tegang</label>
                             </div>
                         </td>
@@ -299,7 +299,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kaki_pasienanak" id="kaki_pasienanak" value="menendang, kaki tertekuk" skor="2">
+                                <input type="radio" class="text-center form-check-input kaki_pasienanak" name="kaki_pasienanak" id="kaki_pasienanak" value="menendang, kaki tertekuk" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> menendang, kaki tertekuk</label>
                             </div>
                         </td>
@@ -310,7 +310,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="activity_pasienanak" id="activity_pasienanak" value="Berbaring tenang, posisi normal, gerakan mudah" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input activity_pasienanak" name="activity_pasienanak" id="activity_pasienanak" value="Berbaring tenang, posisi normal, gerakan mudah" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> Berbaring tenang, posisi normal, gerakan mudah</label>
                             </div>
                         </td>
@@ -321,7 +321,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="activity_pasienanak" id="activity_pasienanak" value="Menggeliat, tidak bisa diam, tegang" skor="1">
+                                <input type="radio" class="text-center form-check-input activity_pasienanak" name="activity_pasienanak" id="activity_pasienanak" value="Menggeliat, tidak bisa diam, tegang" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Menggeliat, tidak bisa diam, tegang</label>
                             </div>
                         </td>
@@ -329,7 +329,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="activity_pasienanak" id="activity_pasienanak" value="kaku atau teggang" skor="2">
+                                <input type="radio" class="text-center form-check-input activity_pasienanak" name="activity_pasienanak" id="activity_pasienanak" value="kaku atau teggang" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> kaku atau teggang</label>
                             </div>
                         </td>
@@ -341,7 +341,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="cry_pasienanak" id="cry_pasienanak" value="tidak menangis" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input cry_pasienanak" name="cry_pasienanak" id="cry_pasienanak" value="tidak menangis" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> tidak menangis</label>
                             </div>
                         </td>
@@ -352,7 +352,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="cry_pasienanak" id="cry_pasienanak" value="Merintih, merengek, kadang-kadang mengeluh" skor="1">
+                                <input type="radio" class="text-center form-check-input cry_pasienanak" name="cry_pasienanak" id="cry_pasienanak" value="Merintih, merengek, kadang-kadang mengeluh" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Merintih, merengek, kadang-kadang mengeluh</label>
                             </div>
                         </td>
@@ -360,7 +360,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="cry_pasienanak" id="cry_pasienanak" value="terus menangis atau teriak" skor="2">
+                                <input type="radio" class="text-center form-check-input cry_pasienanak" name="cry_pasienanak" id="cry_pasienanak" value="terus menangis atau teriak" skor="2">
                                 <label class="form-check-label" for="inlineRadio2">terus menangis atau teriak</label>
                             </div>
                         </td>
@@ -372,7 +372,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="consolabity_pasienanak" id="consolabity_pasienanak" value="Rileks" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input consolabity_pasienanak" name="consolabity_pasienanak" id="consolabity_pasienanak" value="Rileks" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
@@ -384,7 +384,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="consolabity_pasienanak" id="consolabity_pasienanak" value="Dapat ditemukan dengan sentuhan pelukan, bujukan, dialihkan" skor="1">
+                                <input type="radio" class="text-center form-check-input consolabity_pasienanak" name="consolabity_pasienanak" id="consolabity_pasienanak" value="Dapat ditemukan dengan sentuhan pelukan, bujukan, dialihkan" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Dapat ditemukan dengan sentuhan pelukan, bujukan, dialihkan</label>
                             </div>
                         </td>
@@ -392,7 +392,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="consolabity_pasienanak" id="consolabity_pasienanak" value="sering mengeluh, sulit dibujuk" skor="2">
+                                <input type="radio" class="text-center form-check-input consolabity_pasienanak" name="consolabity_pasienanak" id="consolabity_pasienanak" value="sering mengeluh, sulit dibujuk" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> sering mengeluh, sulit dibujuk</label>
                             </div>
                         </td>
@@ -421,7 +421,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="ekspresi_pasienanak" id="ekspresi_pasienanak" value="rileks" skor="0" checked>
+                                <input type="radio" class="text-center form-check-input ekspresi_pasienanak" name="ekspresi_pasienanak" id="ekspresi_pasienanak" value="rileks" skor="0" checked>
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
@@ -432,7 +432,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="ekspresi_pasienanak" id="ekspresi_pasienanak" value="meringis" skor="1">
+                                <input type="radio" class="text-center form-check-input ekspresi_pasienanak" name="ekspresi_pasienanak" id="ekspresi_pasienanak" value="meringis" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Meringis</label>
                             </div>
                         </td>
@@ -443,7 +443,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input checked type="radio" class="text-center form-check-input" name="nangis_pasienanak" id="nangis_pasienanak" value="Tidak Menangis" skor="0">
+                                <input checked type="radio" class="text-center form-check-input nangis_pasienanak" name="nangis_pasienanak" id="nangis_pasienanak" value="Tidak Menangis" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Tidak menangis</label>
                             </div>
                         </td>
@@ -454,7 +454,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="nangis_pasienanak" id="nangis_pasienanak" value="Meringis" skor="1">
+                                <input type="radio" class="text-center form-check-input nangis_pasienanak" name="nangis_pasienanak" id="nangis_pasienanak" value="Meringis" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Meringis</label>
                             </div>
                         </td>
@@ -462,7 +462,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="nangis_pasienanak" id="nangis_pasienanak" skor="2" value="Menangis Keras">
+                                <input type="radio" class="text-center form-check-input nangis_pasienanak" name="nangis_pasienanak" id="nangis_pasienanak" skor="2" value="Menangis Keras">
                                 <label class="form-check-label" for="inlineRadio2"> Menangis keras</label>
                             </div>
                         </td>
@@ -473,7 +473,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input checked type="radio" class="text-center form-check-input" name="pola_pasienanak" id="pola_pasienanak" value="Rileks" skor="0">
+                                <input checked type="radio" class="text-center form-check-input pola_pasienanak" name="pola_pasienanak" id="pola_pasienanak" value="Rileks" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
@@ -484,7 +484,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="pola_pasienanak" id="pola_pasienanak" value="Perubahan Pola Nafas" skor="1">
+                                <input type="radio" class="text-center form-check-input pola_pasienanak" name="pola_pasienanak" id="pola_pasienanak" value="Perubahan Pola Nafas" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Perubahan pola napas</label>
                             </div>
                         </td>
@@ -495,7 +495,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input checked type="radio" class="text-center form-check-input" name="l_pasienanak" id="l_pasienanak" value="Rileks" skor="0">
+                                <input checked type="radio" class="text-center form-check-input l_pasienanak" name="l_pasienanak" id="l_pasienanak" value="Rileks" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
@@ -506,7 +506,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="l_pasienanak" id="l_pasienanak" value="Fleksi" skor="0">
+                                <input type="radio" class="text-center form-check-input l_pasienanak" name="l_pasienanak" id="l_pasienanak" value="Fleksi" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Fleksi</label>
                             </div>
                         </td>
@@ -517,7 +517,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input checked type="radio" class="text-center form-check-input" name="k_pasienanak" id="k_pasienanak" value="Rileks" skor="1">
+                                <input checked type="radio" class="text-center form-check-input k_pasienanak" name="k_pasienanak" id="k_pasienanak" value="Rileks" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Rileks</label>
                             </div>
                         </td>
@@ -528,7 +528,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="k_pasienanak" id="k_pasienanak" value="fleksi" skor="1">
+                                <input type="radio" class="text-center form-check-input k_pasienanak" name="k_pasienanak" id="k_pasienanak" value="fleksi" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> fleksi</label>
                             </div>
                         </td>
@@ -539,7 +539,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input checked type="radio" class="text-center form-check-input" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Tidur" skor="0">
+                                <input checked type="radio" class="text-center form-check-input terangsang_pasienanak" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Tidur" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Tidur</label>
                             </div>
                         <td rowspan="3">
@@ -550,7 +550,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Bangun" skor="0">
+                                <input type="radio" class="text-center form-check-input terangsang_pasienanak" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Bangun" skor="0">
                                 <label class="form-check-label" for="inlineRadio2"> Bangun</label>
                             </div>
                         </td>
@@ -558,7 +558,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Rewel" skor="1">
+                                <input type="radio" class="text-center form-check-input terangsang_pasienanak" name="terangsang_pasienanak" id="terangsang_pasienanak" value="Rewel" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Rewel</label>
                             </div>
                         </td>
@@ -584,7 +584,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="umur_pasienanak" id="umur_pasienanak" value=" Dibawah 3 tahun" skor="4">
+                                <input type="radio" class="text-center form-check-input umur_pasienanak" name="umur_pasienanak" id="umur_pasienanak" value=" Dibawah 3 tahun" skor="4">
                                 <label class="form-check-label" for="inlineRadio2"> Dibawah 3 tahun</label>
                             </div>
                         </td>
@@ -595,7 +595,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="umur_pasienanak" id="umur_pasienanak" value="3-7 tahun" skor="3">
+                                <input type="radio" class="text-center form-check-input umur_pasienanak" name="umur_pasienanak" id="umur_pasienanak" value="3-7 tahun" skor="3">
                                 <label class="form-check-label" for="inlineRadio2"> 3-7 tahun</label>
                             </div>
                         </td>
@@ -603,7 +603,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="umur_pasienanak" id="umur_pasienanak" value="7-13 tahun" skor="2">
+                                <input type="radio" class="text-center form-check-input umur_pasienanak" name="umur_pasienanak" id="umur_pasienanak" value="7-13 tahun" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> 7-13 tahun</label>
                             </div>
                         </td>
@@ -611,7 +611,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="umur_pasienanak" id="umur_pasienanak" value="Lebih 13 tahun" skor="1">
+                                <input type="radio" class="text-center form-check-input umur_pasienanak" name="umur_pasienanak" id="umur_pasienanak" value="Lebih 13 tahun" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Lebih 13 tahun</label>
                             </div>
                         </td>
@@ -622,7 +622,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="jk_pasienanak" id="jk_pasienanak" value="Laki-laki" skor="2">
+                                <input type="radio" class="text-center form-check-input jk_pasienanak" name="jk_pasienanak" id="jk_pasienanak" value="Laki-laki" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> Laki - laki</label>
                             </div>
                         </td>
@@ -633,7 +633,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="jk_pasienanak" id="jk_pasienanak" value="Perempuan" skor="1">
+                                <input type="radio" class="text-center form-check-input jk_pasienanak" name="jk_pasienanak" id="jk_pasienanak" value="Perempuan" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Perempuan</label>
                             </div>
                         </td>
@@ -644,7 +644,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Gangguan neurologis" skor="4">
+                                <input type="radio" class="text-center form-check-input diagnosis_pasienanak" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Gangguan neurologis" skor="4">
                                 <label class="form-check-label" for="inlineRadio2"> Gangguan neurologis</label>
                             </div>
                         </td>
@@ -655,7 +655,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Perubahan dalam oksigenasi (masalah saluran napas, dehidrasi, anemia, anorexia, sinkop, sakit kepala,)" skor="3">
+                                <input type="radio" class="text-center form-check-input diagnosis_pasienanak" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Perubahan dalam oksigenasi (masalah saluran napas, dehidrasi, anemia, anorexia, sinkop, sakit kepala,)" skor="3">
                                 <label class="form-check-label" for="inlineRadio2"> Perubahan dalam oksigenasi (masalah saluran napas, dehidrasi, anemia, anorexia, sinkop, sakit kepala,)</label>
                             </div>
                         </td>
@@ -663,7 +663,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="kelaian psikis atau prilaku" skor="2">
+                                <input type="radio" class="text-center form-check-input diagnosis_pasienanak" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="kelaian psikis atau prilaku" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> kelaian psikis atau prilaku</label>
                             </div>
                         </td>
@@ -671,7 +671,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Diagnosis lainya" skor="1">
+                                <input type="radio" class="text-center form-check-input diagnosis_pasienanak" name="diagnosis_pasienanak" id="diagnosis_pasienanak" value="Diagnosis lainya" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Diagnosis lainya</label>
                             </div>
                         </td>
@@ -682,7 +682,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Tidak menyadari keterbatasan diri" skor="3">
+                                <input type="radio" class="text-center form-check-input kognitif_pasienanak" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Tidak menyadari keterbatasan diri" skor="3">
                                 <label class="form-check-label" for="inlineRadio2"> Tidak menyadari keterbatasan diri</label>
                             </div>
                         </td>
@@ -693,7 +693,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Lupa akan adanya keterbatasan" skor="2">
+                                <input type="radio" class="text-center form-check-input kognitif_pasienanak" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Lupa akan adanya keterbatasan" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> Lupa akan adanya keterbatasan</label>
                             </div>
                         </td>
@@ -701,7 +701,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Orientasi baik terhadap diri sendiri" skor="1">
+                                <input type="radio" class="text-center form-check-input kognitif_pasienanak" name="kognitif_pasienanak" id="kognitif_pasienanak" value="Orientasi baik terhadap diri sendiri" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Orientasi baik terhadap diri sendiri</label>
                             </div>
                         </td>
@@ -712,7 +712,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="fl_pasienanak" id="fl_pasienanak" value="Riwayat jatuh dari tempat tidur saat bayi/anak" skor="4">
+                                <input type="radio" class="text-center form-check-input fl_pasienanak" name="fl_pasienanak" id="fl_pasienanak" value="Riwayat jatuh dari tempat tidur saat bayi/anak" skor="4">
                                 <label class="form-check-label" for="inlineRadio2"> Riwayat jatuh dari tempat tidur saat bayi/anak</label>
                             </div>
                         </td>
@@ -723,7 +723,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="fl_pasienanak" id="fl_pasienanak" value="Pasien menggunakan alat bantu atau bpx/model" skor="3">
+                                <input type="radio" class="text-center form-check-input fl_pasienanak" name="fl_pasienanak" id="fl_pasienanak" value="Pasien menggunakan alat bantu atau bpx/model" skor="3">
                                 <label class="form-check-label" for="inlineRadio2"> Pasien menggunakan alat bantu atau bpx/model</label>
                             </div>
                         </td>
@@ -731,7 +731,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="fl_pasienanak" id="fl_pasienanak" value=" pasien di letakan di tempat tidur" skor="2">
+                                <input type="radio" class="text-center form-check-input fl_pasienanak" name="fl_pasienanak" id="fl_pasienanak" value=" pasien di letakan di tempat tidur" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> pasien di letakan di tempat tidur</label>
                             </div>
                         </td>
@@ -739,7 +739,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="fl_pasienanak" id="fl_pasienanak" value="Diluar ruang rawat" skor="1">
+                                <input type="radio" class="text-center form-check-input fl_pasienanak" name="fl_pasienanak" id="fl_pasienanak" value="Diluar ruang rawat" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> Diluar ruang rawat</label>
                             </div>
                         </td>
@@ -750,7 +750,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="rsp_pasienanak" id="rsp_pasienanak" value="dalam 24 jam" skor="3">
+                                <input type="radio" class="text-center form-check-input rsp_pasienanak" name="rsp_pasienanak" id="rsp_pasienanak" value="dalam 24 jam" skor="3">
                                 <label class="form-check-label" for="inlineRadio2"> dalam 24 jam</label>
                             </div>
                         </td>
@@ -761,7 +761,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="rsp_pasienanak" id="rsp_pasienanak" value="dalam 48 jam" skor="2">
+                                <input type="radio" class="text-center form-check-input rsp_pasienanak" name="rsp_pasienanak" id="rsp_pasienanak" value="dalam 48 jam" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> dalam 48 jam</label>
                             </div>
                         </td>
@@ -769,7 +769,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="rsp_pasienanak" id="rsp_pasienanak" value="48 jam" skor="1">
+                                <input type="radio" class="text-center form-check-input rsp_pasienanak" name="rsp_pasienanak" id="rsp_pasienanak" value="48 jam" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> > 48 jam</label>
                             </div>
                         </td>
@@ -780,7 +780,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="obat_pasienanak" id="obat_pasienanak" value="Bermacam obat yang digunakan : obat
+                                <input type="radio" class="text-center form-check-input obat_pasienanak" name="obat_pasienanak" id="obat_pasienanak" value="Bermacam obat yang digunakan : obat
                                     sedative (kecuali pasien itu, yang
                                     menggunakan sedasi dan paralisis , hiponotik,
                                     barbinurate, fenotiazen, antidepresan, laksatif/diuretik, natkotik)" skor="3">
@@ -797,7 +797,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="obat_pasienanak" id="obat_pasienanak" value="Penggunaan salah satu obat di atas" skor="2">
+                                <input type="radio" class="text-center form-check-input obat_pasienanak" name="obat_pasienanak" id="obat_pasienanak" value="Penggunaan salah satu obat di atas" skor="2">
                                 <label class="form-check-label" for="inlineRadio2"> Penggunaan salah satu obat di atas</label>
                             </div>
                         </td>
@@ -805,7 +805,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="text-center form-check-input" name="obat_pasienanak" id="obat_pasienanak" value="penggunaan obat lainya" skor="1">
+                                <input type="radio" class="text-center form-check-input obat_pasienanak" name="obat_pasienanak" id="obat_pasienanak" value="penggunaan obat lainya" skor="1">
                                 <label class="form-check-label" for="inlineRadio2"> penggunaan obat lainya</label>
                             </div>
                         </td>
@@ -868,7 +868,7 @@
                 cacatpasienanak = $('#cacat_pasienanak:checked').val()
                 nyeri_pasienanak = $('#nyeri_pasienanakchecked').val()
 
-                if (cacatpasienanak == ' Ya') {
+                if (cacatpasienanak == ' Ada') {
                     namacacat = $('#namacacatubuh').val()
                     if (namacacatubuh == '') {
                         Swal.fire({
@@ -950,7 +950,7 @@
             });
             $(".wajah_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat ekspresi wajah',
@@ -965,9 +965,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".kaki_pasienanak").clicik(function() {
+            $(".kaki_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pergerakan pada kaki',
@@ -982,9 +982,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".activity_pasienanak").clicik(function() {
+            $(".activity_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pergerakan pada activity',
@@ -999,9 +999,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".cry_pasienanak").clicik(function() {
+            $(".cry_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat tangisan',
@@ -1016,9 +1016,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".consolabity_pasienanak").clicik(function() {
+            $(".consolabity_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat consolabity',
@@ -1033,9 +1033,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".ekspresi_pasienanak").clicik(function() {
+            $(".ekspresi_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat ekspresi',
@@ -1050,9 +1050,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".nangis_pasienanak").clicik(function() {
+            $(".nangis_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat tangisan',
@@ -1067,9 +1067,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".pola_pasienanak").clicik(function() {
+            $(".pola_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat pola',
@@ -1084,9 +1084,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".l_pasienanak").clicik(function() {
+            $(".l_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter pada lengan',
@@ -1101,9 +1101,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".k_pasienanak").clicik(function() {
+            $(".k_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter pada kaki',
@@ -1118,9 +1118,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".terangsang_pasienanak").clicik(function() {
+            $(".terangsang_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter rangsangan',
@@ -1135,9 +1135,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".umur_pasienanak").clicik(function() {
+            $(".umur_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter umur',
@@ -1152,9 +1152,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".jk_pasienanak").clicik(function() {
+            $(".jk_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 2) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter jenis kelamin',
@@ -1169,9 +1169,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".diagnosis_pasienanak").clicik(function() {
+            $(".diagnosis_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter diagnosis',
@@ -1186,9 +1186,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".kognitif_pasienanak").clicik(function() {
+            $(".kognitif_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 3) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter kognitif',
@@ -1203,9 +1203,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".fl_pasienanak").clicik(function() {
+            $(".fl_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter faktor lingkungan',
@@ -1220,9 +1220,9 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".rsp_pasienanak").clicik(function() {
+            $(".rsp_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 3) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter respon',
@@ -1232,14 +1232,14 @@
                 } else {
                     $('#skorrespon').val(skor)
                     skor1 = skor
-                    skor2 = $('#skorpenggunaanobar').val()
+                    skor2 = $('#skorpenggunaanobat').val()
                     total = parseInt(skor1) + parseInt(skor2)
                     $('#totalskor').val(total)
                 }
             });
-            $(".obat_pasienanak").clicik(function() {
+            $(".obat_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 1) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter penggunaanobat',
@@ -1254,7 +1254,7 @@
                     $('#totalskor').val(total)
                 }
             });
-            $(".cacat_pasienanak").click(function() {
+            $(".cacat_pasienanak1").click(function() {
                 skor = $(this).attr('skor')
                 if (skor == 2) {
                     document.getElementById("namacacatubuh").focus();
