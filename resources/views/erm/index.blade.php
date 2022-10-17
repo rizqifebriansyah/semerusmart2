@@ -21,6 +21,7 @@
                         <td>{{ $p->umur }} tahun</td>
                         <td>{{ $p->alamat }}</td>
                         <td>{{ $p->unit }}</td>
+             
                     </tr>
                     @endforeach
                 </tbody>
@@ -32,4 +33,5 @@
         </div>
         <!-- /.card -->
     </div>
+  
 @endsection

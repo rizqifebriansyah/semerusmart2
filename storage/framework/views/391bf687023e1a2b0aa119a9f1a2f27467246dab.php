@@ -20,6 +20,7 @@
                         <td><?php echo e($p->umur); ?> tahun</td>
                         <td><?php echo e($p->alamat); ?></td>
                         <td><?php echo e($p->unit); ?></td>
+             
                     </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
@@ -31,6 +32,7 @@
         </div>
         <!-- /.card -->
     </div>
+  
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('semeru.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\semerusmart2\resources\views/erm/index.blade.php ENDPATH**/ ?>

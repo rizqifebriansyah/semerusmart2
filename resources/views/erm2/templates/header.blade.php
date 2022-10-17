@@ -70,7 +70,7 @@
             <p>Harap Tunggu</p>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:rgb(15, 144, 79);  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:rgb(33, 65, 45);  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <div class="container">
             <a class="navbar-brand text-light">
                 <img src="{{ asset('public/img/semeru.png') }}" width="360" height="60"

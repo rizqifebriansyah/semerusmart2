@@ -125,6 +125,8 @@
                         <option value="3">RM.02.01-RJ / Pasien Anak</option>
                         <?php else: ?>
                         <option  value="1">RM.02.01-RJ / Pasien Dewasa</option>
+                        <option value="3">RM.02.01-RJ / Pasien Anak</option>
+
 
                         <option hidden value="radiologi">Form Order Radiologi</option>
                         <option hidden value="laboratorium">Form Order Laboratorium</option>
