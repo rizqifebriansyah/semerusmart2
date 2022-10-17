@@ -1,7 +1,9 @@
-<div class="card container-fluid">
+<div class="card scroll">
     <div class="card-header">
         RM.02.01-RJ / Pasien dewasa
         <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+            </button>
         </div>
     </div>
     <form action="" class="simpanrm2 ">
@@ -12,7 +14,7 @@
             </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Kunjungan</td>
-                <td><input readonly class="form-control form-control-sm" name="tgldanjamkunjungan_pasienbaru" id="tgldanjamkunjungan_pasienbaru" value="<?php echo e($now); ?>"></td>
+                <td><input readonly class="form-control form-control-sm" name="tgldanjamkunjungan_pasienbaru" id="tgldanjamkunjungan_pasienbaru" value="<?php echo e($tgl_masuk); ?>"></td>
             </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Pengkajian</td>

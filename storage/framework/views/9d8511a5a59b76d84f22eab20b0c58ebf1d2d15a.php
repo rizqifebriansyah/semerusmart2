@@ -1,14 +1,16 @@
-    <div class="card container-fluid">
+    <div class="card scroll">
         <div class="card-header">
             RM.02.01-RJ / Rev.02 / 19 Pasien Anak - anak
             <div class="card-tools">
-            </div>
+            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+            </button>
+        </div>
         </div>
         <form action="" class="simpanrmanak">
             <table class="table table-sm text-xs">
                 <tr>
                     <td>Tanggal & Jam Kunjungan</td>
-                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="<?php echo e($now); ?>"></td>
+                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="<?php echo e($tgl_masuk); ?>"></td>
                 </tr>
                 <tr>
                     <td>Tanggal & Jam Pengkajian</td>
@@ -1137,7 +1139,7 @@
             });
             $(".umur_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter umur',
@@ -1171,7 +1173,7 @@
             });
             $(".diagnosis_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter diagnosis',
@@ -1188,7 +1190,7 @@
             });
             $(".kognitif_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 3) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter kognitif',
@@ -1205,7 +1207,7 @@
             });
             $(".fl_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 4) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter faktor lingkungan',
@@ -1222,7 +1224,7 @@
             });
             $(".rsp_pasienanak").click(function() {
                 skor = $(this).attr('skor')
-                if (skor == 3) {
+                if (skor == 10) {
                     Swal.fire({
                         icon: 'warning',
                         title: 'terdapat parameter respon',
@@ -1232,7 +1234,7 @@
                 } else {
                     $('#skorrespon').val(skor)
                     skor1 = skor
-                    skor2 = $('#skorpenggunaanobar').val()
+                    skor2 = $('#skorpenggunaanobat').val()
                     total = parseInt(skor1) + parseInt(skor2)
                     $('#totalskor').val(total)
                 }

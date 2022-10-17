@@ -1,14 +1,16 @@
-    <div class="card container-fluid">
+    <div class="card scroll">
         <div class="card-header">
             RM.02.01-RJ / Rev.02 / 19 Pasien Anak - anak
             <div class="card-tools">
-            </div>
+            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+            </button>
+        </div>
         </div>
         <form action="" class="simpanrmanak">
             <table class="table table-sm text-xs">
                 <tr>
                     <td>Tanggal & Jam Kunjungan</td>
-                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="{{ $now }}"></td>
+                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="{{ $tgl_masuk }}"></td>
                 </tr>
                 <tr>
                     <td>Tanggal & Jam Pengkajian</td>

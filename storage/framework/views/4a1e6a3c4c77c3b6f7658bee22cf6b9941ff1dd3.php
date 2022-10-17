@@ -32,7 +32,7 @@
                         <input hidden type="text" id="unit" value="<?php echo e($unit); ?>">
                         <input hidden type="text" id="umur" value="<?php echo e($umur); ?>">
                         <input hidden type="text" id="alamat" value="<?php echo e($alamat); ?>">
-                        <input hidden type="text" id="tglmasuk" value="<?php echo e($tglmasuk); ?>">
+                        <input hidden type="text" id="tglmasuk" value="<?php echo e($tgl_masuk); ?>">
                         <input hidden type="text" id="kodekunjungan" value="<?php echo e($kodekunjungan); ?>">
                         <input hidden type="text" id="nomorrm" value="<?php echo e($rm); ?>">
                         <input hidden type="text" id="kelas" value="<?php echo e($kelas); ?>">
@@ -55,7 +55,7 @@
 
         </ul>
     </div>
-    <div class="card-body scroll">
+    <div class="card-body">
         <div class="tab-content">
             <div class="active tab-pane" id="activity">
                 <div class="post">

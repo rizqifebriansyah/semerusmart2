@@ -51,7 +51,7 @@ class ErmController extends BaseController
         $unit_log = auth()->user()->unit;
         $counter = $request->counter;
         $umur = $request->umur;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $kelas = $request->kelas;
         $periode = DB::select('SELECT DISTINCT DATE(tgl_masuk) as tgl_masuk from ts_kunjungan where no_rm = ? ORDER BY tgl_masuk desc', [$nomorrm]);
         $COUNTER = DB::select('SELECT DISTINCT counter from ts_kunjungan where no_rm = ?', [$nomorrm]);
@@ -77,20 +77,21 @@ class ErmController extends BaseController
             'kelas' => $kelas,
             'nama' =>  $nama,
             'alamat' => $alamat,
-            'tglmasuk' => $tglmasuk,
+            'tgl_masuk' => $tgl_masuk,
             'kodekunjungan' => $kodekunjungan,
             'kunjungan' => $all_licencies,
             'periode' => $periode,
             'umur' => $umur,
             'counter' => $counter,
             'unit' => $unit,
-            'tarif' => $tarif
+            'tarif' => $tarif,
+            'tgl_masuk' => $tgl_masuk
         ]);
     }
     public function pilihform(request $request)
     {
         $id = $request->id;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $nomorrm = $request->nomorrm;
         $nama = $request->nama;
         $unit = $request->unit;
@@ -103,18 +104,22 @@ class ErmController extends BaseController
             return view('erm.form1', [
                 'now' => Carbon::now()->timezone('Asia/Jakarta'),
                 'pasien' => DB::select('SELECT * from mt_pasien where no_rm = ?', [$nomorrm]),
+                'tgl_masuk' => $tgl_masuk
             ]);
         } else if ($id == 2) {
             return view('erm.form2', [
                 'now' => Carbon::now()->timezone('Asia/Jakarta')
             ]);
         } else if ($id == 3) {
-            return view('erm.anakbaru', ['now' => Carbon::now()->timezone('Asia/Jakarta')]);
+            return view('erm.anakbaru', [
+                'now' => Carbon::now()->timezone('Asia/Jakarta'),
+                'tgl_masuk' => $tgl_masuk,
+            ]);
         } else if ($id == 'radiologi') {
 
             return view('erm.formradiologi', [
                 'rm' => $nomorrm,
-                'tglmasuk' => $tglmasuk,
+                'tgl_masuk' => $tgl_masuk,
                 'periode' => $periode,
                 'counter' => $counter,
                 'nama' => $nama,
@@ -126,7 +131,7 @@ class ErmController extends BaseController
         } else if ($id == 'laboratorium') {
             return view('erm.formlaboratorium', [
                 'rm' => $nomorrm,
-                'tglmasuk' => $tglmasuk,
+                'tgl_masuk' => $tgl_masuk,
                 'periode' => $periode,
                 'counter' => $counter,
                 'nama' => $nama,
@@ -153,10 +158,10 @@ class ErmController extends BaseController
         $data = json_decode($_POST['data'], true);
         $kodekunjungan = $request->kodekunjungan;
         $rm = $request->rm;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $dataSet['rm'] = $rm;
         $dataSet['kodekunjungan'] = $kodekunjungan;
-        $dataSet['tanggalmasuk'] = $tglmasuk;
+        $dataSet['tanggalmasuk'] = $tgl_masuk;
         foreach ($data as $nama) {
             $index =  $nama['name'];
             $value =  $nama['value'];
@@ -221,10 +226,10 @@ class ErmController extends BaseController
         $data = json_decode($_POST['data'], true);
         $kodekunjungan = $request->kodekunjungan;
         $rm = $request->rm;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $dataSet['rm'] = $rm;
         $dataSet['kodekunjungan'] = $kodekunjungan;
-        $dataSet['tanggalmasuk'] = $tglmasuk;
+        $dataSet['tanggalmasuk'] = $tgl_masuk;
         foreach ($data as $nama) {
             $index = $nama['name'];
             $value = $nama['value'];
@@ -287,10 +292,10 @@ class ErmController extends BaseController
         $data = json_decode($_POST['data'], true);
         $kodekunjungan = $request->kodekunjungan;
         $rm = $request->rm;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $dataSet['rm'] = $rm;
         $dataSet['kodekunjungan'] = $kodekunjungan;
-        $dataSet['tanggalmasuk'] = $tglmasuk;
+        $dataSet['tanggalmasuk'] = $tgl_masuk;
         foreach ($data as $nama) {
             $index = $nama['name'];
             $value = $nama['value'];
@@ -361,14 +366,14 @@ class ErmController extends BaseController
         $data = json_decode($_POST['data'], true);
         $kodekunjungan = $request->kodekunjungan;
         $rm = $request->rm;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $namapasien = $request->nama;
         $unit = $request->unit;
         $umur = $request->umur;
         $alamat = $request->alamat;
         $dataSet['rm'] = $rm;
         $dataSet['kodekunjungan'] = $kodekunjungan;
-        $dataSet['tanggalmasuk'] = $tglmasuk;
+        $dataSet['tanggalmasuk'] = $tgl_masuk;
         $dataSet['nama'] = $namapasien;
         $dataSet['unit'] = $unit;
         $dataSet['umur'] = $umur;
@@ -402,14 +407,14 @@ class ErmController extends BaseController
         $data = json_decode($_POST['data'], true);
         $kodekunjungan = $request->kodekunjungan;
         $rm = $request->rm;
-        $tglmasuk = $request->tglmasuk;
+        $tgl_masuk = $request->tgl_masuk;
         $namapasien = $request->nama;
         $unit = $request->unit;
         $umur = $request->umur;
         $alamat = $request->alamat;
         $dataSet['rm'] = $rm;
         $dataSet['kodekunjungan'] = $kodekunjungan;
-        $dataSet['tanggalmasuk'] = $tglmasuk;
+        $dataSet['tanggalmasuk'] = $tgl_masuk;
         $dataSet['nama'] = $namapasien;
         $dataSet['unit'] = $unit;
         $dataSet['umur'] = $umur;
