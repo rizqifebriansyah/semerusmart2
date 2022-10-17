@@ -10,7 +10,7 @@
             <table class="table table-sm text-xs">
                 <tr>
                     <td>Tanggal & Jam Kunjungan</td>
-                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="<?php echo e($tgl_masuk); ?>"></td>
+                    <td><input readonly id="tgldanjamkunjungan_pasienanak" class="form-control form-control-sm" name="tgldanjamkunjungan_pasienanak" id="tgldanjamkunjungan_pasienanak" value="<?php echo e($tglmasuk); ?>"></td>
                 </tr>
                 <tr>
                     <td>Tanggal & Jam Pengkajian</td>

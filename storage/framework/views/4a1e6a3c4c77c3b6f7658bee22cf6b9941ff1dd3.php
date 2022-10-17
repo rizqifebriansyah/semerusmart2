@@ -32,7 +32,7 @@
                         <input hidden type="text" id="unit" value="<?php echo e($unit); ?>">
                         <input hidden type="text" id="umur" value="<?php echo e($umur); ?>">
                         <input hidden type="text" id="alamat" value="<?php echo e($alamat); ?>">
-                        <input hidden type="text" id="tglmasuk" value="<?php echo e($tgl_masuk); ?>">
+                        <input hidden type="text" id="tglmasuk" value="<?php echo e($tglmasuk); ?>">
                         <input hidden type="text" id="kodekunjungan" value="<?php echo e($kodekunjungan); ?>">
                         <input hidden type="text" id="nomorrm" value="<?php echo e($rm); ?>">
                         <input hidden type="text" id="kelas" value="<?php echo e($kelas); ?>">
@@ -50,12 +50,11 @@
             <li class="nav-item"><a class="nav-link tampilcppt" href="#cppt" data-toggle="tab" nomorrm="<?php echo e($rm); ?>">CPPT</a></li>
             <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">E - Form</a></li>
             <li hidden class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Tindakan Medis</a></li>
-            <li hidden class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Tindakan Medis & Order
-                    Layanan</a></li>
+           
 
         </ul>
     </div>
-    <div class="card-body">
+    <div class="card-body ">
         <div class="tab-content">
             <div class="active tab-pane" id="activity">
                 <div class="post">

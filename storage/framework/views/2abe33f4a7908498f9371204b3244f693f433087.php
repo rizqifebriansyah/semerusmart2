@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Kunjungan</td>
-                <td><input readonly class="form-control form-control-sm" name="tgldanjamkunjungan_pasienbaru" id="tgldanjamkunjungan_pasienbaru" value="<?php echo e($tgl_masuk); ?>"></td>
+                <td><input readonly class="form-control form-control-sm" name="tgldanjamkunjungan_pasienbaru" id="tgldanjamkunjungan_pasienbaru" value="<?php echo e($tglmasuk); ?>"></td>
             </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Pengkajian</td>
