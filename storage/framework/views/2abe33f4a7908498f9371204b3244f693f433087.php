@@ -8,17 +8,13 @@
     </div>
     <form action="" class="simpanrm2 ">
         <table class="table table-sm text-md">
-            <tr hidden> 
-                <td class="text-bold">KODE UNIT</td>
-                <td><input readonly class="form-control form-control-sm" name="kode_form" id="kode_form" ></td>
-            </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Kunjungan</td>
                 <td><input readonly class="form-control form-control-sm" name="tgldanjamkunjungan_pasienbaru" id="tgldanjamkunjungan_pasienbaru" value="<?php echo e($tglmasuk); ?>"></td>
             </tr>
             <tr>
                 <td class="text-bold">Tanggal & Jam Pengkajian</td>
-                <td><input class="form-control form-control-sm" value="<?php echo e($now); ?>" id="tgldanjampengkajian_pasienbaru" name="tgldanjampengkajian_pasienbaru"></td>
+                <td><input readonly class="form-control form-control-sm" value="<?php echo e($now); ?>" id="tgldanjampengkajian_pasienbaru" name="tgldanjampengkajian_pasienbaru"></td>
             </tr>
             <tr>
                 <td class="text-bold">Sumber Data</td>

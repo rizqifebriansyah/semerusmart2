@@ -35,7 +35,7 @@
         $("#tabelpasienterpilih").DataTable({
             "responsive": true,
             "lengthChange": false,
-            "pageLength": 5,
+            "pageLength": 100,
             "autoWidth": false,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
         });
@@ -44,7 +44,7 @@
         $("#datapasien").DataTable({
             "responsive": false,
             "lengthChange": false,
-            "pageLength": 5,
+            "pageLength": 100,
             "autoWidth": false,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
         });
